@@ -11,11 +11,19 @@
     <?php
 
         function mostrararray($array){
+        
             echo "[";
-            for ($i=0; $i < count($array); $i++) { 
-                echo $array[$i].", ";
+            for ($i=0; $i < count($array); $i++) {
+                
+                if ($i == (count($array) - 1)) {
+                    echo $array[$i];
+                } else {
+                    echo $array[$i].", ";
+                }
+            
             }
             echo "] <br>";
+        
         }
 
         function menor($elem, &$min){
@@ -23,6 +31,7 @@
                 $min = $elem;
             }
         }
+
         function mayor($elem, &$max){
             if($elem > $max) {
                 $max = $elem;
@@ -38,7 +47,7 @@
         }
 
         $alumnos = array();
-        $min = $max = $minpos = $maxpos = $promo = $apro = $sum= 0;
+        $promo = $apro = $sum= 0;
         
         for ($i=0; $i < 22; $i++) { 
             $alumnos[$i] = rand(2, 10);
@@ -66,11 +75,11 @@
         cantidadenarray($alumnos, 8, $promo);
         cantidadenarray($alumnos, 6, $apro);
 
-        echo "<li>La cantidad de alumnos promocionados es $promo (". ($promo / 22) * 100 ."%)</li>";
-        echo "<li>La cantidad de alumnos aprobados es $apro (". ($apro / 22) * 100 ."%)</li>";
-        echo "<li>La nota promedio fue ". $sum / 22 ."</li>";
-        echo "<li>Menor nota: $min; En posición: $minpos</li>";
-        echo "<li>Mayor nota: $max; En posición: $maxpos</li>";
+        echo "<li>Cantidad de Alumnos Promocionados: $promo (". round(($promo / 22) * 100, 2) ."%)</li>";
+        echo "<li>Cantidad de Alumnos Aprobados: $apro (". round(($apro / 22) * 100, 2) ."%)</li>";
+        echo "<li>Nota Promedio: ". $sum / 22 ."</li>";
+        echo "<li>Menor Nota: $min; Posición: $minpos</li>";
+        echo "<li>Mayor Nota: $max; Posición: $maxpos</li>";
 
     ?>
     
