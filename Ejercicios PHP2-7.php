@@ -9,7 +9,7 @@
 <body>
     
     <?php
-
+    
         function mostrararray($array){
         
             echo "[";

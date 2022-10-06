@@ -43,8 +43,8 @@
         mostrararray($array);
 
         echo "<li>Positivos:$posi</li>";
-        echo "<li>Positivos:$nega</li>";
-        echo "<li>Positivos:$null</li>";
+        echo "<li>Negativos:$nega</li>";
+        echo "<li>Nulos:$null</li>";
     ?>
     
 </body>

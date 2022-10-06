@@ -26,7 +26,7 @@
         
         }
 
-        function mayormenorarray($array, &$max, &$min){
+        function maxminarray($array, &$max, &$min){
             for ($i=0; $i < count($array); $i++) { 
                 if ($i == 0) {
                     $min = $array[$i];
@@ -50,7 +50,7 @@
             $array[$i] = rand(-100, 100);
         }
         
-        mayormenorarray($array, $max, $min);
+        maxminarray($array, $max, $min);
         mostrararray($array);
 
         echo "<li>Menor Elemento: $min</li>";
