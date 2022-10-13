@@ -9,36 +9,7 @@
 <body>
     
     <?php
-
-        function mostrararray($array){
-        
-            echo "[";
-            for ($i=0; $i < count($array); $i++) {
-                
-                if ($i == (count($array) - 1)) {
-                    echo $array[$i];
-                } else {
-                    echo $array[$i].", ";
-                }
-            
-            }
-            echo "] <br>";
-        
-        }
-
-        function parimpar($elem){
-            if($elem % 2 == 0) {
-                return true;
-            }else {
-                return false;
-            }
-        }
-
-        function mayor($elem, &$max){
-            if($elem > $max) {
-                $max = $elem;
-            }
-        }
+        include 'Funciones Utiles.php';
 
         $array = array();
         $maxposi = $max = $pares = $impares = $nulos = $totalsum = 0;

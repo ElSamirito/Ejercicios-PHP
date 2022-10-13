@@ -9,39 +9,7 @@
 <body>
     
     <?php
-
-        function mostrararray($array){
-
-            echo "[";
-            for ($i=0; $i < count($array); $i++) {
-                
-                if ($i == (count($array) - 1)) {
-                    echo $array[$i];
-                } else {
-                    echo $array[$i].", ";
-                }
-
-            }
-            echo "] <br>";
-        
-        }
-
-        function maxminarray($array, &$max, &$min){
-            for ($i=0; $i < count($array); $i++) { 
-                if ($i == 0) {
-                    $min = $array[$i];
-                    $max = $array[$i];
-                } else{
-                    if($array[$i] < $min) {
-                        $min = $array[$i];
-                    }
-    
-                    if($array[$i] > $max) {
-                        $max = $array[$i];
-                    }
-                }
-            }
-        }
+        include 'Funciones Utiles.php';
 
         $array = array();
         $min = $max = 0;

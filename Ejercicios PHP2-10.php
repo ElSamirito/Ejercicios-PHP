@@ -9,34 +9,7 @@
 <body>
     
     <?php
-
-        function mostrararray($array){
-        
-            echo "[";
-            for ($i=0; $i < count($array); $i++) {
-                
-                if ($i == (count($array) - 1)) {
-                    echo $array[$i];
-                } else {
-                    echo $array[$i].", ";
-                }
-            
-            }
-            echo "] <br>";
-        
-        }
-
-        function menor($elem, &$min){
-            if($elem < $min) {
-                $min = $elem;
-            }
-        }
-        
-        function mayor($elem, &$max){
-            if($elem > $max) {
-                $max = $elem;
-            }
-        }
+        include 'Funciones Utiles.php';
 
         $array = array();
 

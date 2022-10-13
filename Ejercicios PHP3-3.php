@@ -9,38 +9,7 @@
 <body>
     
     <?php
-
-        function mostrararray($array){
-
-            echo "[";
-            for ($i=0; $i < count($array); $i++) {
-                
-                if ($i == (count($array) - 1)) {
-                    echo $array[$i];
-                } else {
-                    echo $array[$i].", ";
-                }
-
-            }
-            echo "] <br>";
-        
-        }
-
-        function mostrarmatrix($matrix){
-            
-            for ($i=0; $i < count($matrix); $i++) { 
-                mostrararray($matrix[$i]);
-            }
-
-        }
-
-        function parimpar($elem){
-            if($elem % 2 == 0) {
-                return true;
-            }else {
-                return false;
-            }
-        }
+        include 'Funciones Utiles.php';
 
         $matrix = array(
             array(),

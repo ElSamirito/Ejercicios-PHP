@@ -9,22 +9,7 @@
 <body>
     
     <?php
-    
-        function mostrararray($array){
-
-            echo "[";
-            for ($i=0; $i < count($array); $i++) {
-                
-                if ($i == (count($array) - 1)) {
-                    echo $array[$i];
-                } else {
-                    echo $array[$i].", ";
-                }
-
-            }
-            echo "] <br>";
-        
-        }
+        include 'Funciones Utiles.php';
 
         $array = array();
         $posi = $nega = $null = 0;
