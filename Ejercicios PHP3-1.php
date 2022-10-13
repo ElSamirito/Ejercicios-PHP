@@ -11,11 +11,7 @@
     <?php
         include 'Funciones Utiles.php';
 
-        $matrix = array(
-            array(),
-            array(),
-            array()
-        );
+        $matrix = array();
 
         for ($i=0; $i < 3; $i++) {
             

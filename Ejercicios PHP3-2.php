@@ -11,11 +11,7 @@
     <?php
         include 'Funciones Utiles.php';
 
-        $matrix = array(
-            array(),
-            array(),
-            array()
-        );
+        $matrix = array();
 
         $posi = $nega = $null = 0;
         

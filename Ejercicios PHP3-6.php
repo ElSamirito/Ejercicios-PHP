@@ -11,11 +11,7 @@
     <?php
         include 'Funciones Utiles.php';
 
-        $matrix = array(
-            array(),
-            array(),
-            array()
-        );
+        $matrix = array();
         
         for ($i=0; $i < 3; $i++) {
             
@@ -29,17 +25,17 @@
 
         $zona1 = $zona2 = $zona3 = $zona4 = array();
         
-        for ($i=0; $i < 3; $i++) { 
+        for ($i=0; $i < count($matrix); $i++) { 
             array_push($zona1, $matrix[$i][0]);
             array_push($zona2, $matrix[$i][1]);
             array_push($zona3, $matrix[$i][2]);
             array_push($zona4, $matrix[$i][3]);
         }
 
-        $vend = $zona = array();
+        $campo = $zona = array();
 
-        for($i=0; $i < 3; $i++){
-            $vend[$i] = promarray($matrix[$i]);
+        for($i=0; $i < count($matrix); $i++){
+            $campo[$i] = promarray($matrix[$i]);
         }
         
         array_push($zona, promarray($zona1));
@@ -54,10 +50,10 @@
 
         brfacha();
         
-        for ($i=0; $i < 3; $i++) { 
-            echo "Promedio Campo ". $i+1 .": ". $vend[$i] ."<br>";
+        for ($i=0; $i < count($campo); $i++) { 
+            echo "Promedio Campo ". $i+1 .": ". $campo[$i] ."<br>";
         }
-        for ($i=0; $i < 4; $i++) { 
+        for ($i=0; $i < count($zona); $i++) { 
             echo "Promedio Zona ". $i+1 .": ". $zona[$i] ."<br>";
         }
 
@@ -65,7 +61,7 @@
         
         $maxposi = findmatrix($max, $matrix);
         echo "Mayor lluvia: $max Campo: ". $maxposi[1] ." Zona: ". $maxposi[0] ."<br>";
-        echo "El promedio de todas las mediciones es: ". promarray($vend) ." <br>";
+        echo "El promedio de todas las mediciones es: ". promarray($campo) ." <br>";
 
     ?>
     

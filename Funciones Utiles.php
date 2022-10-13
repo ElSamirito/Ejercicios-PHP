@@ -96,8 +96,22 @@
         return $total;
     }
 
+    function sumatrix($matrix){
+        $total = 0;
+
+        for ($i=0; $i < count($matrix); $i++) { 
+            $total += sumarray($matrix[$i]);
+        }
+
+        return $total;
+    }
+
     function promarray($array){
         return (sumarray($array) / count($array));
+    }
+
+    function promatrix($matrix){
+        return sumatrix($matrix) / count($matrix);
     }
 
     function findarray($elem, $array, &$index){
