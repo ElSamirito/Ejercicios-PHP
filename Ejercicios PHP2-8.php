@@ -19,7 +19,6 @@
             $array[$i] = rand(0, 1000);
 
             if ($i == 0) {
-                $min = $array[0];
                 $max = $array[0];
             }else {
                 mayor($array[$i], $max);

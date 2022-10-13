@@ -18,7 +18,8 @@
             $array[$i] = rand(-100, 100);
         }
         
-        maxminarray($array, $max, $min);
+        mayorarray($array, $max);
+        menorarray($array, $min);
         mostrararray($array);
 
         echo "<li>Menor Elemento: $min</li>";
